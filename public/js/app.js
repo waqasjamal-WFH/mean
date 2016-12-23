@@ -6,7 +6,7 @@ angular.module('sampleApp', ['ui.bootstrap','ui.calendar','ngRoute', 'appRoutes'
         $location.path('/home');
         // console.log($localStorage.data._id);
       }else{
-        $location.path('/login');
+        // $location.path('/login');
       }
   }, 1000);
 
