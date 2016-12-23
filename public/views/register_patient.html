@@ -1,0 +1,23 @@
+<!-- HEADER -->
+  <nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Virtual Hospital</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register_doctor">register Doctor</a></li>
+      <li><a href="/register_patient">register Patient</a></li>
+    </ul>
+  </nav>
+<div class="login">
+	<h1>Register Patient</h1>
+    <form method="post">
+    	<input type="text" ng-model="firstname" placeholder="firstname" required="required" />
+        <input type="password" ng-model="lastname" placeholder="lastname" required="required" />
+    	<input type="text" ng-model="email" placeholder="Email" required="required" />
+        <input type="password" ng-model="pass" placeholder="Password" required="required" />
+        <input type="text" ng-model="disease" placeholder="disease for patient" required="required" />
+
+        <button type="submit" ng-click="register()" class="btn btn-primary btn-block btn-large">Let me in.</button>
+    </form>
+</div>
