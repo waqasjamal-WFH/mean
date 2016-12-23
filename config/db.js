@@ -30,7 +30,7 @@ var Server = mongo.Server,
     Db = mongo.Db,
     BSON = mongo.BSONPure;
 
-var server = new Server('mongodb://<dbuser>:<dbpassword>@ds141428.mlab.com:41428/fyp_project', 41428, {auto_reconnect: true});
+var server = new Server('mongodb://ds141428.mlab.com:41428/fyp_project', 41428, {auto_reconnect: true});
 db = new Db('fyp_project', server);
 
 db.open(function(err, db) {
