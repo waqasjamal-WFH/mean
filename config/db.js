@@ -30,12 +30,12 @@ var Server = mongo.Server,
     Db = mongo.Db,
     BSON = mongo.BSONPure;
 
-var server = new Server('ds141428.mlab.com', 41428, {auto_reconnect: true});
+var server = new Server('mongodb://waqas:jamal@123@ds141428.mlab.com', 41428, {auto_reconnect: true});
 db = new Db('fyp_project', server);
 
 db.open(function(err, db) {
     if(!err) {
-        console.log("Connected to 'mydb' database");
+        console.log("Connected to 'fyp_project' database");
         db.collection('register', {strict:true}, function(err, collection) {
             if (err) {
                 console.log("The 'wines' collection doesn't exist. Creating it with sample data...");
