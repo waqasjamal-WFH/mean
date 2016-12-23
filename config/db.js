@@ -39,7 +39,7 @@ db.open(function(err, db) {
         db.collection('register', {strict:true}, function(err, collection) {
             if (err) {
                 console.log("The 'wines' collection doesn't exist. Creating it with sample data...");
-                populateDB();
+                // populateDB();
             }
         });
     }
