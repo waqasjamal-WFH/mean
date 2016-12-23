@@ -35,11 +35,11 @@ db = new Db('fyp_project', server);
 db.open(function(err, db) {
     if(!err) {
         console.log("Connected to 'fyp_project' database");
-        db.collection('register', {strict:true}, function(err, collection) {
-            if (err) {
-                console.log("The 'wines' collection doesn't exist. Creating it with sample data...");
-                // populateDB();
-            }
-        });
+        // db.collection('register', {strict:true}, function(err, collection) {
+        //     if (err) {
+        //         console.log("The 'wines' collection doesn't exist. Creating it with sample data...");
+        //         // populateDB();
+        //     }
+        // });
     }
 });
