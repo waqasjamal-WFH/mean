@@ -30,8 +30,8 @@ var Server = mongo.Server,
     Db = mongo.Db,
     BSON = mongo.BSONPure;
 
-var server = new Server('localhost', 27017, {auto_reconnect: true});
-db = new Db('mydb', server);
+var server = new Server('mongodb://waqasjamal123:jamal@123@ds141428.mlab.com:41428', 41428, {auto_reconnect: true});
+db = new Db('fyp_project', server);
 
 db.open(function(err, db) {
     if(!err) {
