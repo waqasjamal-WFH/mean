@@ -29,17 +29,18 @@ var mongo = require('mongodb');
 var Server = mongo.Server,
     Db = mongo.Db,
     BSON = mongo.BSONPure;
-var server = new Server('hello:hello@ds141428.mlab.com:41428/fyp_project', 41428, {auto_reconnect: true});
+var server = new Server('helloo:hello@ds141428.mlab.com', 41428, {auto_reconnect: true});
+// var server = new Server('localhost', 27017, {auto_reconnect: true});
 db = new Db('fyp_project', server);
 
 db.open(function(err, db) {
     if(!err) {
         console.log("Connected to 'fyp_project' database");
-        // db.collection('register', {strict:true}, function(err, collection) {
-        //     if (err) {
-        //         console.log("The 'wines' collection doesn't exist. Creating it with sample data...");
-        //         // populateDB();
-        //     }
-        // });
+        db.collection('register', {strict:true}, function(err, collection) {
+            if (err) {
+                console.log("The 'wines' collection doesn't exist. Creating it with sample data...");
+                // populateDB();
+            }
+        });
     }
 });

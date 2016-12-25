@@ -5,7 +5,7 @@ exports.register = function(req, res) {
     db.collection('register', function(err, collection) {
         collection.insert(data, {safe:true}, function(err, result) {
             if (err) {
-                res.send({'error':'An error has occurred'});
+                res.send({err});
             } else {
                 console.log('Success: ' + '1');
                 res.send('1');
@@ -21,7 +21,7 @@ exports.register_parient = function(req, res) {
     db.collection('register_patient', function(err, collection) {
         collection.insert(data, {safe:true}, function(err, result) {
             if (err) {
-                res.send({'error':'An error has occurred'});
+                res.send({err});
             } else {
                 console.log('Success: ' + '1');
                 res.send('1');
