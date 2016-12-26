@@ -1,0 +1,23 @@
+<!-- HEADER -->
+  <nav class="navbar navbar-inverse">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Virtual Hospital</a>
+    </div>
+    <ul class="nav navbar-nav pull-right">
+      <li ><a ng-click="logout()">Logout</a></li>
+    </ul>
+  </nav>
+<div class="login">
+  <h1>Appointment for Doctor</h1>
+    <form method="post">
+      <input type="text" ng-model="title" placeholder="title" required="required" />
+        <input type="datetime" ng-model="lastname" placeholder="lastname" required="required" />
+        <input type="text" ng-model="address" placeholder="address" required="required" />
+      <input type="text" ng-model="email" placeholder="email" required="required" />
+      <input type="text" ng-model="degree" placeholder="Degree" required="required" />
+      <input type="text" ng-model="job" placeholder="Previous Job" required="required" />
+      <input type="text" ng-model="number" placeholder="Contact Number" required="required" />
+        <input type="password" ng-model="pass" placeholder="Password" required="required" />
+        <button type="submit" ng-click="register()" class="btn btn-primary btn-block btn-large">Let me in.</button>
+    </form>
+</div>

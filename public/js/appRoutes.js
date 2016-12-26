@@ -28,6 +28,9 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 		.when('/logout', {
 			templateUrl: 'views/login.html',
 			controller: 'logincontroller'	
+		}).when('/docappoint', {
+			templateUrl: 'views/doctor_appoint.html',
+			controller: 'docapoint_controller'	
 		});
 
 	$locationProvider.html5Mode(true);
