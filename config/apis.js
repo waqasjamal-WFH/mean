@@ -16,30 +16,30 @@ exports.register = function(req, res) {
 
 exports.register_parient = function(req, res ) {
     var data = req.body;
-    // res.send('Adding wine: ' + data.username);
-    // res.end();
-    var MongoClient = require('mongodb').MongoClient
-      , Server = require('mongodb').Server;
+    res.send('Adding wine: ' + data.username);
+    res.end();
+    // var MongoClient = require('mongodb').MongoClient
+    //   , Server = require('mongodb').Server;
 
-    var mongoClient = new MongoClient(new Server('ds141428.mlab.com', 41428));
-    mongoClient.open(function(err, mongoClient) {
+    // var mongoClient = new MongoClient(new Server('ds141428.mlab.com', 41428));
+    // mongoClient.open(function(err, mongoClient) {
 
-        if(!err) {
+    //     if(!err) {
             
-        //         var db = mongoclient.db("fyp_project");
-        var db = mongoClient.db("fyp_project");
+    //     //         var db = mongoclient.db("fyp_project");
+    //     var db = mongoClient.db("fyp_project");
 
 
 
-        db.authenticate('hello', 'hello', function(err, result) {
-            // mongoClient.close();
-        console.log("db.collection");
-            // If authorized you can use the database in the db variable
-          });
-          // console.log(db);
-        }
-        // exports.db =db;
-    });
+    //     db.authenticate('hello', 'hello', function(err, result) {
+    //         // mongoClient.close();
+    //     console.log("db.collection");
+    //         // If authorized you can use the database in the db variable
+    //       });
+    //       // console.log(db);
+    //     }
+    //     // exports.db =db;
+    // });
 
 };
 
