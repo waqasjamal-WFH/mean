@@ -37,20 +37,20 @@ mongoClient.open(function(err, mongoClient) {
 db.authenticate('hello', 'hello', function(err, result) {
     // On authorized result=true
     // Not authorized result=false
-    db.collection('register_patient', function(err, collection) {
-        collection.insert(data, {safe:true}, function(err, result) {
-            if (err) {
-                res.send(err);
-            } else {
-                console.log('Success: ' + '1');
-                res.send('1');
-            }
-        });
-    });
+    // db.collection('register_patient', function(err, collection) {
+    //     collection.insert(data, {safe:true}, function(err, result) {
+    //         if (err) {
+    //             res.send(err);
+    //         } else {
+    //             console.log('Success: ' + '1');
+    //             res.send('1');
+    //         }
+    //     });
+    // });
 
 
-    mongoClient.close();
-// console.log(db.collection);
+    // mongoClient.close();
+console.log("db.collection");
     // If authorized you can use the database in the db variable
   });
 
