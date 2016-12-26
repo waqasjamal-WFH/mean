@@ -49,7 +49,7 @@ db.authenticate('hello', 'hello', function(err, result) {
     });
 
 
-    // mongoClient.close();
+    mongoClient.close();
 // console.log(db.collection);
     // If authorized you can use the database in the db variable
   });
