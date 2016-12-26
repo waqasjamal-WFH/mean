@@ -24,8 +24,6 @@ exports.register = function(req, res) {
             });
         }
     });
-    // res.send('Adding wine: ' + data.username);
-    // res.end();
     
 };
 
@@ -62,31 +60,57 @@ exports.register_parient = function(req, res ) {
 
 exports.login = function(req, res) {
 	var data = req.body;
-    db.collection('register', function(err, collection) {
-        collection.findOne({'email': data.email , 'pass' : data.pass}, function(err, result) {
-            if (result) {
-                 res.send(result);
-                 res.end();
-            } else {
-                  res.send("0");
-                  res.end();
-            }
-        });
-    });
+    var MongoClient = require('mongodb').MongoClient
+      , Server = require('mongodb').Server;
+
+    var mongoClient = new MongoClient(new Server('ds141428.mlab.com', 41428));
+    mongoClient.open(function(err, mongoClient) {
+
+        if(!err) {
+            
+            var db = mongoClient.db("fyp_project");
+            db.authenticate('hello', 'hello', function(err, result) {
+                    db.collection('register', function(err, collection) {
+                        collection.findOne({'email': data.email , 'pass' : data.pass}, function(err, result) {
+                            if (result) {
+                                 res.send(result);
+                                 res.end();
+                            } else {
+                                  res.send("0");
+                                  res.end();
+                            }
+                        });
+                    });
+                
+            });
+        }
+    });    
 };
 
 exports.login_patient = function(req, res) {
     var data = req.body;
-    
-    db.collection('register_patient', function(err, collection) {
-        collection.findOne({'email': data.email , 'pass' : data.pass}, function(err, result) {
-            if (result) {
-                 res.send(result);
-                 res.end();
-            } else {
-                  res.send("0");
-                  res.end();
-            }
-        });
-    });
+    var MongoClient = require('mongodb').MongoClient
+      , Server = require('mongodb').Server;
+
+    var mongoClient = new MongoClient(new Server('ds141428.mlab.com', 41428));
+    mongoClient.open(function(err, mongoClient) {
+
+        if(!err) {
+            
+            var db = mongoClient.db("fyp_project");
+            db.authenticate('hello', 'hello', function(err, result) {
+                db.collection('register_patient', function(err, collection) {
+                    collection.findOne({'email': data.email , 'pass' : data.pass}, function(err, result) {
+                        if (result) {
+                             res.send(result);
+                             res.end();
+                        } else {
+                              res.send("0");
+                              res.end();
+                        }
+                    });
+                });   
+            });
+        }else{res.send(err)}
+    });    
 };
