@@ -111,6 +111,6 @@ exports.login_patient = function(req, res) {
                     });
                 });   
             });
-        }else{res.send(err)}
+        }
     });    
 };

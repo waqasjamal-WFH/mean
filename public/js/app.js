@@ -2,8 +2,8 @@ angular.module('sampleApp', ['ui.bootstrap','ui.calendar','ngRoute', 'appRoutes'
 .run(function($http,$location,$interval,$localStorage) {
 
   $interval(function () {
-      if($localStorage.data){
-        $location.path('/home');
+      if(!$localStorage.data){
+        $location.path('/login');
         // console.log($localStorage.data._id);
       }else{
         // $location.path('/login');
