@@ -8,6 +8,6 @@ angular.module('sampleApp', ['ui.bootstrap','ui.calendar','ngRoute', 'appRoutes'
       }else{
         // $location.path('/login');
       }
-  }, 1000);
+  }, 100);
 
 });
