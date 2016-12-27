@@ -28,8 +28,8 @@ angular.module('MainCtrl', ['ui.bootstrap','ui.calendar']).controller('MainContr
 
     
     /* event sources array*/
-    $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
-    $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
+    // $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
+    // $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
 
 
 
