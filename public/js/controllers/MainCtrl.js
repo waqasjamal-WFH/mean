@@ -14,7 +14,7 @@ angular.module('MainCtrl', ['ui.bootstrap','ui.calendar']).controller('MainContr
     
     /* event source that contains custom events on the scope */
     $scope.events = [
-      {title: 'All Day Event',start: '12/27/2016'}
+      {title: 'All Day Event',start: 'Tue Dec 27 2016 14:26:34'}
       
     ];
     /* event source that calls a function on every view switch */
@@ -40,13 +40,7 @@ angular.module('MainCtrl', ['ui.bootstrap','ui.calendar']).controller('MainContr
             eventClick: function (event) {
                 $scope.SelectedEvent = event;
             },
-            eventAfterAllRender: function () {
-                if ($scope.events.length > 0 && isFirstTime) {
-                    //Focus first event
-                    uiCalendarConfig.calendars.myCalendar.fullCalendar('gotoDate', $scope.events[0].start);
-                    isFirstTime = false;
-                }
-            }
+            
         }
     };
 
