@@ -7,7 +7,7 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
 	$interval(function () {
 	      if(!$localStorage.data){
 	        // $location.path('/home');
-	        console.log($location.absUrl());
+	        console.log($location.path());
 	      
 	      }else{ }
 	}, 100);
