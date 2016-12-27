@@ -4,7 +4,13 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
 
 
 
-
+	$interval(function () {
+	      if(!$localStorage.data ){
+	        $location.path('/login');
+	        
+	      
+	      }else{ }
+	}, 100);
 
  
 
