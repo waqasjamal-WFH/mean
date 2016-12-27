@@ -14,12 +14,8 @@ angular.module('MainCtrl', ['ui.bootstrap','ui.calendar']).controller('MainContr
     
     /* event source that contains custom events on the scope */
     $scope.events = [
-      {title: 'All Day Event',start: new Date(y, m, 1)},
-      {title: 'Long Event',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
-      {id: 999,title: 'Repeating Event',start: new Date(y, m, d - 3, 16, 0),allDay: false},
-      {id: 999,title: 'Repeating Event',start: new Date(y, m, d + 4, 16, 0),allDay: false},
-      {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
-      {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
+      {title: 'All Day Event',start: '12/27/2016'}
+      
     ];
     /* event source that calls a function on every view switch */
    
@@ -31,7 +27,28 @@ angular.module('MainCtrl', ['ui.bootstrap','ui.calendar']).controller('MainContr
     $scope.eventSources = [$scope.events];
     // $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
 
-
+ $scope.uiConfig = {
+        calendar: {
+            height: 450,
+            editable: true,
+            displayEventTime: false,
+            header: {
+                left: 'month basicWeek basicDay agendaWeek agendaDay',
+                center: 'title',
+                right:'today prev,next'
+            },
+            eventClick: function (event) {
+                $scope.SelectedEvent = event;
+            },
+            eventAfterAllRender: function () {
+                if ($scope.events.length > 0 && isFirstTime) {
+                    //Focus first event
+                    uiCalendarConfig.calendars.myCalendar.fullCalendar('gotoDate', $scope.events[0].start);
+                    isFirstTime = false;
+                }
+            }
+        }
+    };
 
 
 
