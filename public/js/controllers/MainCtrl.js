@@ -24,22 +24,7 @@ angular.module('MainCtrl', ['ui.bootstrap','ui.calendar']).controller('MainContr
     /* event source that calls a function on every view switch */
    
    
-    /* config object */
-    $scope.uiConfig = {
-      calendar:{
-        height: 450,
-        editable: true,
-        header:{
-          left: 'title',
-          center: '',
-          right: 'today prev,next'
-        },
-        eventClick: $scope.alertOnEventClick,
-        eventDrop: $scope.alertOnDrop,
-        eventResize: $scope.alertOnResize,
-        eventRender: $scope.eventRender
-      }
-    };
+   
 
     
     /* event sources array*/
