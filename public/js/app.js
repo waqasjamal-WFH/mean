@@ -4,7 +4,7 @@ angular.module('sampleApp', ['doc_appointctrl','ngRoute', 'appRoutes', 'MainCtrl
   $interval(function () {
       if($localStorage.data ){
         $location.path('/home');
-        console.log($state.href($state.current.name);;
+        console.log($state.href($state.current.name));
       
       }else{ }
   }, 100);
