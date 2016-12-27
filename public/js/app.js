@@ -1,4 +1,4 @@
-angular.module('sampleApp', ['doc_appointctrl','ui.bootstrap','ui.calendar','ngRoute', 'appRoutes', 'MainCtrl', 'loginCtrl', 'NerdService', 'regCtrl_patient','regCtrl', 'GeekService'])
+angular.module('sampleApp', ['doc_appointctrl','ngRoute', 'appRoutes', 'MainCtrl', 'loginCtrl', 'NerdService', 'regCtrl_patient','regCtrl', 'GeekService'])
 .run(function($http,$location,$interval,$localStorage) {
 
   $interval(function () {
