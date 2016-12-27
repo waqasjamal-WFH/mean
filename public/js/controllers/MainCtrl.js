@@ -1,4 +1,4 @@
-angular.module('MainCtrl', ['ui.bootstrap','ui.calendar']).controller('MainController', function($scope,$location,$localStorage,uiCalendarConfig) {
+angular.module('MainCtrl', ['ui.calendar']).controller('MainController', function($scope,$location,$localStorage,uiCalendarConfig) {
 
 	
 
