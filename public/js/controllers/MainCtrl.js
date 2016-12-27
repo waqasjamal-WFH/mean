@@ -14,7 +14,7 @@ angular.module('MainCtrl', ['ui.bootstrap','ui.calendar']).controller('MainContr
     
     /* event source that contains custom events on the scope */
     $scope.events = [
-      {title: 'All Day Event',start: 'Tue Dec 27 2016 14:26:34'}
+      {title: 'All Day Event',start: new Date(), allday :false}
       
     ];
     /* event source that calls a function on every view switch */
