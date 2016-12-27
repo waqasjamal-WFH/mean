@@ -1,5 +1,5 @@
 angular.module('sampleApp', ['doc_appointctrl','ngRoute', 'appRoutes', 'MainCtrl', 'loginCtrl', 'NerdService', 'regCtrl_patient','regCtrl', 'GeekService'])
-.run(function($http,$location,$interval,$localStorage,$state) {
+.run(function($http,$location,$interval,$localStorage) {
 
   // $interval(function () {
   //     if($localStorage.data ){
