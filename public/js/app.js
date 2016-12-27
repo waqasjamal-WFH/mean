@@ -3,11 +3,13 @@ angular.module('sampleApp', ['doc_appointctrl','ngRoute', 'appRoutes', 'MainCtrl
 
   $interval(function () {
       if(!$localStorage.data){
-        // $location.path('/home');
+        $location.path('/login');
         // console.log($localStorage.data._id);
-      }else{
-        $location.path('/home');
-      }
+      }else if(!$localStorage.data){
+        $location.path('/register_doctor');
+      }else if(!$localStorage.data){
+        $location.path('/register_patient');
+      }else{}
   }, 100);
 
 });
