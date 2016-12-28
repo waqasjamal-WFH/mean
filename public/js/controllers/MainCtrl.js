@@ -8,11 +8,11 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
     var currentView = "month";
 
     //event source that pulls from google.com
-    $scope.eventSource = {
-            url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
-            className: 'gcal-event',           // an option!
-            currentTimezone: 'America/Chicago' // an option!
-    };
+    // $scope.eventSource = {
+    //         url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
+    //         className: 'gcal-event',           // an option!
+    //         currentTimezone: 'America/Chicago' // an option!
+    // };
 
     //you can add the events in following ways
     $scope.events = [
