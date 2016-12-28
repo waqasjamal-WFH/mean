@@ -6,13 +6,13 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
     var m = date.getMonth();
     var y = date.getFullYear();
     var currentView = "month";
-
-    event source that pulls from google.com
-    $scope.eventSource = {
-            url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
-            className: 'gcal-event',           // an option!
-            currentTimezone: 'America/Chicago' // an option!
-    };
+ $scope.events=[]
+    // event source that pulls from google.com
+    // $scope.eventSource = {
+    //         url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
+    //         className: 'gcal-event',           // an option!
+    //         currentTimezone: 'America/Chicago' // an option!
+    // };
 
     //you can add the events in following ways
     $scope.events = [
@@ -63,7 +63,8 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
     };
      
     /* event sources array*/
-    $scope.eventSources = [$scope.events, $scope.eventSource];
+    // $scope.eventSources = [$scope.events, $scope.eventSource];
+    $scope.eventSources = [$scope.events];
 
 
 
