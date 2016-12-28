@@ -1,4 +1,4 @@
-angular.module('regCtrl', []).controller('regcontroller', function($scope, $http) {
+angular.module('regCtrl', []).controller('regcontroller', function($interval,$location,$scope, $http,$localStorage) {
 
   $interval(function () {
         if( $location.path()=="/register_doctor"){

@@ -1,4 +1,4 @@
-angular.module('regCtrl_patient', []).controller('regcontroller_patient', function($scope, $http) {
+angular.module('regCtrl_patient', []).controller('regcontroller_patient', function($scope, $http,$localStorage,$location,$interval) {
 
 
   $interval(function () {
@@ -10,7 +10,7 @@ angular.module('regCtrl_patient', []).controller('regcontroller_patient', functi
       }else{ }
   }, 100);
 
-  
+
 	$scope.register = function(){
 		 var data = {
           firstname: $scope.firstname,

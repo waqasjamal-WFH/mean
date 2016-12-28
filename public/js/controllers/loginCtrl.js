@@ -1,4 +1,4 @@
-angular.module('loginCtrl', ['ngStorage']).controller('logincontroller', function($scope,$http,$localStorage,$location) {
+angular.module('loginCtrl', ['ngStorage']).controller('logincontroller', function($interval,$scope,$http,$localStorage,$location) {
 	$interval(function () {
 	      if( $location.path()=="/login"){
 	      	if($localStorage.data){
