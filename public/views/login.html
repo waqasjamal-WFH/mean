@@ -43,7 +43,14 @@
             <input type="password" ng-model="pass" placeholder="Password" required="required" />
         <label class="login-field-icon fui-lock" for="login-pass"></label>
         </div>
-
+        <div class="dropdown">
+        
+        <select id="option" class="btn btn-primary dropdown-toggle">
+        <option value="doctor">Doctor</option>
+        <option value="patient">Patient</option>
+        
+      </select>
+    </div>
         <button type="submit" ng-click="login()" class="btn btn-primary btn-block btn-large">Let me in.</button>
       </div>
     </div>
