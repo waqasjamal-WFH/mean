@@ -23,6 +23,7 @@ angular.module('loginCtrl', ['ngStorage']).controller('logincontroller', functio
       	if(usertype== "doctor"){
       		$http.post("/login", data).success(function(response) {
 		        if(response== "0"){
+		        	alert("Incorrect email or password")
 		          console.log("fail")
 		        }else{
 		          $location.path('/home');
