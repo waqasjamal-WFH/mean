@@ -43,8 +43,8 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
         }   
     };
     /* event sources array*/
-    $scope.eventSources = [$scope.eventSources];
-	
+    $scope.eventSources = $scope.eventSources;
+
 
 
 
