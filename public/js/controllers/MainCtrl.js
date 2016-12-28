@@ -81,7 +81,7 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
             eventAfterAllRender: function () {
                 if ($scope.events.length > 0 && isFirstTime) {
                     //Focus first event
-                    uiCalendarConfig.calendars.myCalendar.fullCalendar('gotoDate', $scope.events[0].start);
+                    uiCalendarConfig.calendars.fullCalendar('gotoDate', $scope.events[0].start);
                     isFirstTime = false;
                 }
             }
@@ -91,7 +91,7 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
 
 
 
-    
+
      
     /* event sources array*/
     // $scope.eventSources = [$scope.events, $scope.eventSource];
