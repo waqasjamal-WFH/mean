@@ -67,7 +67,7 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
     // $scope.eventSources = [$scope.events, $scope.eventSource];
      $scope.eventSources = [$scope.events];
 
-
+console.log($scope.events);
 
 	$interval(function () {
 	      if( $location.path()=="/home"){
