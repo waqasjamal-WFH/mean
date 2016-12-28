@@ -6,7 +6,9 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
     var m = date.getMonth();
     var y = date.getFullYear();
     var currentView = "month";
- $scope.events=[]
+ $scope.events=[];
+     $scope.eventSources = [$scope.events];
+
     // event source that pulls from google.com
     // $scope.eventSource = {
     //         url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
@@ -64,7 +66,6 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
      
     /* event sources array*/
     // $scope.eventSources = [$scope.events, $scope.eventSource];
-    $scope.eventSources = [$scope.events];
 
 
 
