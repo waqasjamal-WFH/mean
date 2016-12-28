@@ -9,7 +9,7 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
 
 
     /* event source that contains custom events on the scope */
-    $scope.events = [
+    $scope.eventSources = [
       { title: 'All Day Event', start: new Date(y, m, 1) },
       { title: 'Long Event', start: new Date(y, m, d - 5), end: new Date(y, m, d - 2) },
       { id: 999, title: 'Repeating Event', start: new Date(y, m, d - 3, 16, 0), allDay: false },
@@ -43,7 +43,7 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
         }   
     };
     /* event sources array*/
-    $scope.eventSources = [$scope.events];
+    $scope.eventSources = [$scope.eventSources];
 	
 
 
