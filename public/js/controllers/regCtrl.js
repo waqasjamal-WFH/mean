@@ -23,7 +23,8 @@ angular.module('regCtrl', []).controller('regcontroller', function($interval,$lo
 
       $http.post("/regis", data).success(function(data, status) {
         if(status= '1'){
-          console.log("success")
+          console.log("success");
+          location.path('/login');
         }else{
           console.log("fail")
         }

@@ -32,8 +32,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			templateUrl: 'views/doctor_appoint.html',
 			controller: 'docapoint_controller'	
 		}).otherwise({
-			templateUrl: 'views/login.html',
-			controller: 'logincontroller'
+			redirectTo : '/login'
 
 		});
 
