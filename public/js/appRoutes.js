@@ -31,8 +31,9 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 		}).when('/docappoint', {
 			templateUrl: 'views/doctor_appoint.html',
 			controller: 'docapoint_controller'	
-		}).otherwise({
-			redirectTo : '/login'
+		}).otherwise('/login'{
+			templateUrl: 'views/login.html',
+			controller: 'logincontroller'
 
 		});
 
