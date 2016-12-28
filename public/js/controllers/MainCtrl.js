@@ -33,7 +33,11 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
         });
     };
 
-
+    $scope.renderCalender = function(calendar) {
+      if(uiCalendarConfig.calendars[calendar]){
+        uiCalendarConfig.calendars[calendar].fullCalendar('render');
+      }
+    };
 
     //with this you can handle the events that generated when we change the view i.e. Month, Week and Day
     $scope.changeView = function(view,calendar) {
@@ -45,19 +49,49 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
     };
      
      
-    /* config object */
-    $scope.uiConfig = {
-      calendar:{
-        height: 450,
-        editable: true,
-        header:{
-          left: 'title',
-          center: '',
-          right: 'today prev,next'
-        },
+    // /* config object */
+    // $scope.uiConfig = {
+    //   calendar:{
+    //     height: 450,
+    //     editable: true,
+    //     header:{
+    //       left: 'title',
+    //       center: '',
+    //       right: 'today prev,next'
+    //     },
         
-      }    
+    //   }    
+    // };
+
+
+ //configure calendar
+    $scope.uiConfig = {
+        calendar: {
+            height: 450,
+            editable: true,
+            displayEventTime: false,
+            header: {
+                left: 'month basicWeek basicDay agendaWeek agendaDay',
+                center: 'title',
+                right:'today prev,next'
+            },
+            eventClick: function (event) {
+                $scope.SelectedEvent = event;
+            },
+            eventAfterAllRender: function () {
+                if ($scope.events.length > 0 && isFirstTime) {
+                    //Focus first event
+                    uiCalendarConfig.calendars.myCalendar.fullCalendar('gotoDate', $scope.events[0].start);
+                    isFirstTime = false;
+                }
+            }
+        }
     };
+
+
+
+
+    
      
     /* event sources array*/
     // $scope.eventSources = [$scope.events, $scope.eventSource];
