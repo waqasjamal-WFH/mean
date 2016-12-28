@@ -24,7 +24,7 @@ angular.module('regCtrl_patient', []).controller('regcontroller_patient', functi
       $http.post("/regis_patient", data).success(function(data, status) {
         if(status= '1'){
           console.log("success");
-          location.path('/login');
+          $location.path('/login');
         }else{
           console.log("fail")
         }
