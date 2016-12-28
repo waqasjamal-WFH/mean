@@ -55,11 +55,7 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
           center: '',
           right: 'today prev,next'
         },
-        dayClick: $scope.dayClick,
-        eventDrop: $scope.alertOnDrop,
-        eventResize: $scope.alertOnResize,
-        eventClick: $scope.eventClick,
-        viewRender: $scope.renderView
+        
       }    
     };
      
