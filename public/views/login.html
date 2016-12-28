@@ -9,7 +9,7 @@
       <li><a href="/register_patient">register Patient</a></li>
     </ul>
   </nav>
-<div class="login">
+<!-- <div class="login">
 	<h1>Login</h1>
     <form method="post">
     	<input type="text" ng-model="email" placeholder="Email" required="required" />
@@ -26,6 +26,27 @@
 
         <button type="submit" ng-click="login()" class="btn btn-primary btn-block btn-large">Let me in.</button>
     </form>
-</div>
+</div> -->
+<div class="login">
+    <div class="login-screen">
+      <div class="app-title">
+        <h1>Login</h1>
+      </div>
+
+      <div class="login-form">
+        <div class="control-group">
+        <input type="text" ng-model="email" placeholder="Email" required="required" />  
+        <label class="login-field-icon fui-user" for="login-name"></label>
+        </div>
+
+        <div class="control-group">
+            <input type="password" ng-model="pass" placeholder="Password" required="required" />
+        <label class="login-field-icon fui-lock" for="login-pass"></label>
+        </div>
+
+        <button type="submit" ng-click="login()" class="btn btn-primary btn-block btn-large">Let me in.</button>
+      </div>
+    </div>
+  </div>
   
 
