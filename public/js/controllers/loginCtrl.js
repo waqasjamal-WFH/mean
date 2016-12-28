@@ -1,4 +1,17 @@
 angular.module('loginCtrl', ['ngStorage']).controller('logincontroller', function($scope,$http,$localStorage,$location) {
+	$interval(function () {
+	      if( $location.path()=="/login"){
+	      	if($localStorage.data){
+	      		$location.path('/home');
+	      	}
+	        // $location.path('/home');  
+	    }else{ }
+	}, 100);
+
+
+
+
+
 	$scope.login = function(){
 		var usertype=$('#option').val();
 		var data = {

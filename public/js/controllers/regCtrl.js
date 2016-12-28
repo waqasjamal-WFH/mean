@@ -1,5 +1,14 @@
 angular.module('regCtrl', []).controller('regcontroller', function($scope, $http) {
 
+  $interval(function () {
+        if( $location.path()=="/register_doctor"){
+          if($localStorage.data){
+            $location.path('/home');
+          }
+          // $location.path('/home');  
+      }else{ }
+  }, 100);
+
 	$scope.register = function(){
 		 var data = {
           firstname: $scope.firstname,

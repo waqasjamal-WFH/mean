@@ -4,22 +4,19 @@ angular.module('MainCtrl', ['ui.calendar']).controller('MainController', functio
 
 
 
+
+
+
+
+
 	$interval(function () {
 	      if( $location.path()=="/home"){
 	      	if(!$localStorage.data){
 	      		$location.path('/login');
 	      	}
-	        // $location.path('/home');
-	        
-	      
-	      }else{ }
+	        // $location.path('/home');  
+	    }else{ }
 	}, 100);
-
- 
-
-
-
-
 
 	$scope.logout= function(){
 		$localStorage.$reset();
