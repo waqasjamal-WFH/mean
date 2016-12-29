@@ -8,7 +8,7 @@ angular.module('doc_appointctrl', []).controller('docapoint_controller', functio
           doc_name: $('#option')
       };
 
-      console.log(doc_name);
+      console.log($('#option'));
 
       // $http.post("/regis", data).success(function(data, status) {
       //   if(status= '1'){
