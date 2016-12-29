@@ -5,7 +5,7 @@ angular.module('doc_appointctrl', []).controller('docapoint_controller', functio
           firstname: $scope.disease,
           datee: $scope.date,
           doc_id: $('#option').val(),
-          doc_name: $('#option').innerHTML
+          doc_name: $('#option option:selected').text()
       };
 
       console.log($('#option'));
