@@ -9,9 +9,9 @@ var date = new Date();
   // Clear events and assign the static events source.
   $scope.events = [];
   $scope.staticEvents = [
-    {title: 'Static 1', start: new Date(), allDay: true},
-    {title: 'Static 2', start: new Date(), allDay: true},
-    {title: 'Static 3', start: new Date(), allDay: true}
+    {title: 'Static 1', start: "2016-12-29", allDay: true}
+    // {title: 'Static 2', start: new Date(), allDay: true},
+    // {title: 'Static 3', start: new Date(), allDay: true}
   ];
   
   // Clear events via splice(0) and then push into events source.
