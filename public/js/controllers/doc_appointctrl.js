@@ -5,10 +5,10 @@ angular.module('doc_appointctrl', []).controller('docapoint_controller', functio
           firstname: $scope.disease,
           datee: $scope.date,
           doc_id: $('#option').val(),
-          doc_name: $('#option')
+          doc_name: $('#option').innerHTML
       };
 
-      console.log($('#option'));
+      console.log(data);
 
       // $http.post("/regis", data).success(function(data, status) {
       //   if(status= '1'){
