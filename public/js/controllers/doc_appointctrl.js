@@ -13,13 +13,14 @@ angular.module('doc_appointctrl', []).controller('docapoint_controller', functio
       console.log($localStorage.data._id);
       console.log(data);
 
-      // $http.post("/regis", data).success(function(data, status) {
-      //   if(status= '1'){
-      //     console.log("success")
-      //   }else{
-      //     console.log("fail")
-      //   }
-      // })
+      $http.post("/add_appoinment", data).success(function(data) {
+        // if(status= '1'){
+        //   console.log("success")
+        // }else{
+        //   console.log("fail")
+        // }
+        console.log(data);
+      })
 
 	};	
 

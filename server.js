@@ -26,6 +26,7 @@ app.use(express.static(__dirname + '/public')); // set the static files location
 // api functions 
 app.post('/regis', api.register);
 app.post('/regis_patient', api.register_parient);
+app.post('/add_appoinment', api.register_parient);
 app.get('/getalldoc', api.getdoctor);
 
 app.post('/login', api.login);
