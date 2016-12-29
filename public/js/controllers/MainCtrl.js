@@ -1,7 +1,7 @@
 angular.module('MainCtrl', ['ui.calendar']).controller('MainController', function($interval,$scope,$location,$localStorage,$compile,uiCalendarConfig) {
 
 
-// var date = new Date();
+var date = new Date();
   var d = date.getDate();
   var m = date.getMonth();
   var y = date.getFullYear();
