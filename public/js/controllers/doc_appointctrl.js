@@ -3,8 +3,9 @@ angular.module('doc_appointctrl', []).controller('docapoint_controller', functio
 	$scope.register = function(){
 		 var data = {
           firstname: $scope.disease,
-          address: $scope.date,
-          datee: $('#option').val()
+          datee: $scope.date,
+          doc_id: $('#option').val(),
+          doc_name: $('#option').html,
       };
 
       console.log(data);
