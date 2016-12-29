@@ -23,7 +23,7 @@ angular.module('doc_appointctrl', []).controller('docapoint_controller', functio
         if(data){
 
          $.each(data, function(key, value) {   
-            $('#option').append('<option value="doctor">'+value+'</option>');
+            $('#option').append('<option value="doctor">'+value.firstname+'</option>');
                     
 });
 
