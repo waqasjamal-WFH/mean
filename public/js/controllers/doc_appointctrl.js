@@ -19,9 +19,11 @@ angular.module('doc_appointctrl', []).controller('docapoint_controller', functio
 
 	};	
 
-  $http.get("/getalldoc").success(function(err, status) {
+  $http.get("/getalldoc").success(function(err, status,data) {
         if(status){
-          console.log(status)
+          console.log(status);
+          console.log(data);
+          
         }else{
           console.log("fail")
         }
