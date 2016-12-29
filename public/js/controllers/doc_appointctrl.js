@@ -21,6 +21,13 @@ angular.module('doc_appointctrl', []).controller('docapoint_controller', functio
 
   $http.get("/getalldoc").success(function(data) {
         if(data){
+
+         $.each(data, function(key, value) {   
+            $('#option').append('<option value="doctor">'+value+'</option>');
+                    
+});
+
+
           // console.log(status);
           console.log(data);
 
