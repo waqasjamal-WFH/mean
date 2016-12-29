@@ -131,7 +131,7 @@ exports.getdoctor = function(req, res) {
             var db = mongoClient.db("fyp_project");
             db.authenticate('hello', 'hello', function(err, result) {
                 db.collection('register', function(err, collection) {
-                    collection.find( function(err, result) {
+                    collection.find({}).toArray(function(err,result){
                         if (result) {
                              res.send(result);
                              res.end();
