@@ -149,29 +149,29 @@ exports.getdoctor = function(req, res) {
 
 exports.addingappointment = function(req, res) {
     var data = req.body;
-    console.log(data);
-    res.send(data);
-    // var MongoClient = require('mongodb').MongoClient
-    //   , Server = require('mongodb').Server;
+    // console.log(data);
+    // res.send(data);
+    var MongoClient = require('mongodb').MongoClient
+      , Server = require('mongodb').Server;
 
-    // var mongoClient = new MongoClient(new Server('ds141428.mlab.com', 41428));
-    // mongoClient.open(function(err, mongoClient) {
+    var mongoClient = new MongoClient(new Server('ds141428.mlab.com', 41428));
+    mongoClient.open(function(err, mongoClient) {
 
-    //     if(!err) {
+        if(!err) {
             
-    //         var db = mongoClient.db("fyp_project");
-    //         db.authenticate('hello', 'hello', function(err, result) {
-    //             db.collection('doctor_appointment', function(err, collection) {   
-    //                 collection.insert(data, {safe:true}, function(err, result) {
-    //                     if (err) {
-    //                         res.send({err});
-    //                     } else {
-    //                         console.log('Success: ' + '1');
-    //                         res.send('1');
-    //                     }
-    //                 });
-    //             });  
-    //         });
-    //     }
-    // });
+            var db = mongoClient.db("fyp_project");
+            db.authenticate('hello', 'hello', function(err, result) {
+                db.collection('doctor_appointment', function(err, collection) {   
+                    collection.insert(data, {safe:true}, function(err, result) {
+                        if (err) {
+                            res.send({err});
+                        } else {
+                            console.log('Success: ' + '1');
+                            res.send('1');
+                        }
+                    });
+                });  
+            });
+        }
+    });
 };
