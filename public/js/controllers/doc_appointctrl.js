@@ -19,4 +19,13 @@ angular.module('doc_appointctrl', []).controller('docapoint_controller', functio
 
 	};	
 
+  $http.post("/getalldoc", data).success(function(data, status) {
+        if(status= '1'){
+          console.log("success")
+        }else{
+          console.log("fail")
+        }
+      })
+
+
 });
